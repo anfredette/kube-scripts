@@ -38,7 +38,7 @@ for i in $(seq 1 $MAX_TRIES); do
 done
 
 if [ -z "${SVC_POD_IP}" ] || [ "${SVC_POD_IP}" == "<none>" ]; then
-  echo "Failed to get IP address for pod $SVC_POD_NAME in $MAX_TRIES tries"
+  echo "ERROR: Failed to get IP address for pod $SVC_POD_NAME in $MAX_TRIES tries"
   exit 1
 fi
 
@@ -57,3 +57,4 @@ EOF
 
 # Export serivice
 subctl export service -n default $SVC_NAME
+
