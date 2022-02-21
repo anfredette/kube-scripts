@@ -57,4 +57,3 @@ EOF
 
 # Export serivice
 subctl export service -n default $SVC_NAME
-
